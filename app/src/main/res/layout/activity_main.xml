@@ -18,15 +18,28 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:text="http://www.w3school.com.cn/i/eg_planets.jpg"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
+        android:layout_marginTop="10dp"
         android:id="@+id/button1"
         android:text="预览"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+        <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/next"
+        android:text="下一页"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
     <Button
         android:id="@+id/button2"
         android:text="设置屏幕背景"
         android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content" />
     <ImageView
         android:layout_width="wrap_content"

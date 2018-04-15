@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -36,6 +37,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private EditText meditText1;
     private Button mbutton1;
     private Button mbutton2;
+    private Button mButtonNext;
     private Bitmap bm;
    // private String path;
 
@@ -55,6 +57,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         mbutton1.setOnClickListener(this);
         mbutton2.setOnClickListener(this);
+
+        mButtonNext=findViewById(R.id.next);
+        mButtonNext.setOnClickListener(this);
 
 //        mbutton1.setOnClickListener(new Button.OnClickListener()
 //        {
@@ -138,6 +143,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
                     //传入type=2位设置桌面
                     setImage(path,2);
                 }
+                break;
+            case R.id.next:
+                Intent intent=new Intent(MainActivity.this,NextActivity.class);
+                startActivity(intent);
 
         }
 
